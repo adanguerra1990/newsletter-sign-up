@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Fuentes
+$fuente-principal: 'Roboto', sans-serif;
+$weight400: 400;
+$weight700: 700;
+
+// Colores
+$rojo: rgb(255, 98, 87);
+
+// Neutral
+$grisOscuro: hsl(234, 29%, 20%);
+$grisCarbon: hsl(235, 18%, 26%);
+$gris: hsl(231, 7%, 60%);
+$blanco: hsl(0, 0%, 100%);
+
+// Media Queries
+$telefono: 480px;
+$tablet: 768px;

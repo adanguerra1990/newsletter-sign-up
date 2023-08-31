@@ -1,0 +1,31 @@
+{
+  "name": "newsletter-sign-up-with-success-message-main",
+  "version": "1.0.0",
+  "description": "Sistema de vaildacion de registro para un Newsletter",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "HTML",
+    "SASS",
+    "GULP",
+    "JAVASCRIPT"
+  ],
+  "author": "Adan Guerra",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.29",
+    "sass": "^1.66.1"
+  }
+}

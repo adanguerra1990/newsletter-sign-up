@@ -1,0 +1,67 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: v.$fuente-principal;
+    font-size: 1.6rem;
+    color: v.$grisOscuro;
+    background-color: v.$grisCarbon;
+}
+
+.container-center {
+    
+    @include m.telefono {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+    @include m.tablet {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+img {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: v.$rojo;
+}
+
+.invalido:focus {
+    border-color: rgb(255, 98, 87);
+    color: rgb(255, 98, 87);
+    background: rgba(255, 98, 87, 0.38);
+}
+
+.valido:focus {
+    border-color: 2px solid #789b78;
+    background-color: #4ee33054;
+    color: black;
+}

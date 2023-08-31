@@ -1,0 +1,167 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.container {
+    background-color: v.$blanco;
+
+    @include m.telefono {
+        max-width: 70rem;
+        display: flex;
+        align-items: center;
+        border-radius: 2rem;
+        padding: 2rem;
+        gap: 2rem;
+
+    }
+
+    @include m.tablet {
+        max-width: 90rem;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+
+.container-img {
+
+    @include m.telefono {
+        order: 2;        
+    }
+
+    @include m.tablet {
+        order: 2;
+    }
+
+    .img-desktop {
+        display: none;
+
+        @include m.telefono {
+            display: block;
+
+        }
+
+        @include m.tablet {
+            display: block;
+        }
+    }
+
+    .img-mobile {
+        @include m.telefono {
+            display: none;
+        }
+
+        @include m.tablet {
+            display: none;
+
+        }
+    }
+
+
+}
+
+.container-info {
+    width: 85%;
+    max-width: 45rem;
+    margin: 0 auto;
+
+    @include m.telefono {
+        order: 1;
+        padding: 0 2rem;
+    }
+
+    @include m.tablet {        
+        order: 1;
+        padding: 0 4rem;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: v.$grisOscuro;
+        margin: 2rem 0;
+
+        @include m.tablet {
+            font-size: 5rem;
+        }
+    }
+
+    p {
+        color: v.$grisOscuro;
+        font-size: 1.5rem;
+
+        @include m.tablet {
+            font-size: 1.6rem;
+        }
+    }
+
+    .description-list {
+        padding: 0;
+        list-style: none;
+        margin: 2rem 0;
+        font-size: 1.5rem;
+
+        @include m.tablet {
+            margin: 3rem 0;
+            font-size: 1.6rem;
+        }
+
+        li {
+            padding-left: 3rem;
+            background-image: url(/build/img/icon-list.svg);
+            background-position: 0 0;
+            background-size: 1.7rem 1.7rem;
+            background-repeat: no-repeat;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+
+            @include m.tablet {
+                font-size: 1.6rem;
+                background-size: 1.8rem 1.8rem;
+            }
+            
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+.container-form {
+
+    .label-field {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        font-weight: v.$weight700;
+        margin-bottom: 1.2rem;
+        
+    }
+
+
+
+    #email {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border: 1px solid v.$gris;
+        outline: none;
+
+        @include m.telefono {
+            padding: 1.3rem;
+        }
+
+        @include m.tablet {
+            padding: 2rem;
+        }
+
+        &:focus {
+            border: 2px solid v.$grisOscuro;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.container-modal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7rem 0 2rem;
+    background-color: v.$blanco;
+
+    @include m.telefono {        
+        max-height: 50rem;
+    }
+
+
+    @include m.tablet {
+        max-height: 50rem;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .content-modal {
+        width: 85%;
+        max-width: 50rem;
+        margin: 0 auto;
+        z-index: 3;
+
+        @include m.tablet {
+            width: 80%;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 2rem 0;
+            font-weight: 700;
+            line-height: 1;
+
+            @include m.telefono {
+                font-size: 5rem;
+            }
+
+            @include m.tablet {
+                font-size: 5rem;
+            }
+        }
+
+        #email-registrado {
+            font-weight: v.$weight700;
+        }
+
+        .btn-modal {
+            margin: 2rem 0;
+
+            &:hover {
+                box-shadow: 4px 5px 20px 1px #ff3e83d4;
+            }
+        }
+    }
+
+
+    .modal-img {
+        width: 6rem;
+    }
+
+    .mensaje {
+        line-height: 1.5;
+    }
+
+}
